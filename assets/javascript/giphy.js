@@ -63,7 +63,7 @@ function displayInfo(){
                     // making image
                     var personImage= $("<img>");
                     // setting image src and adding class
-                    personImage.attr("src", result[j].images.fixed_height.url);
+                    personImage.attr("src", result[j].images.original_still.url);
                     personImage.addClass("img");
                     personImage.attr("data-still",result[j].images.original_still.url);
                     personImage.attr("data-state","still");
