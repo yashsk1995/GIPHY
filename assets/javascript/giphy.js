@@ -1,5 +1,5 @@
 // array that hold a intial list of item to display gif
-var fperson = ["TOM CRUISE","ARNOLD SCHWARZENEGGER","SYLVESTER STALLONE","MORGAN FREEMAN","NICOLAS CAGE","VIN DIESEL"];
+var fperson = ["ARNOLD SCHWARZENEGGER","TOM CRUISE","SYLVESTER STALLONE","MORGAN FREEMAN","NICOLAS CAGE","VIN DIESEL"];
 
 // funtcion that creat button on page
 function creatbt() {
@@ -63,9 +63,9 @@ function displayInfo(){
                     // making image
                     var personImage= $("<img>");
                     // setting image src and adding class
-                    personImage.attr("src", result[j].images.original_still.url);
+                    personImage.attr("src", result[j].images.fixed_height_still.url);
                     personImage.addClass("img");
-                    personImage.attr("data-still",result[j].images.original_still.url);
+                    personImage.attr("data-still",result[j].images.fixed_height_still.url);
                     personImage.attr("data-state","still");
                     personImage.attr("data-animate",result[j].images.fixed_height.url);
 
