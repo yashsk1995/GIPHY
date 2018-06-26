@@ -65,6 +65,14 @@ function displayInfo(){
                     // setting image src and adding class
                     personImage.attr("src", result[j].images.fixed_height.url);
                     personImage.addClass("img");
+                    personImage.attr("data-still",result[j].images.original_still.url);
+                    personImage.attr("data-state","still");
+                    personImage.attr("data-animate",result[j].images.fixed_height.url);
+
+
+                    
+
+
                     // adding a p class to paragraph
                     p.addClass("p");
                     // appending to newdiv paragraph and image
@@ -107,3 +115,24 @@ function add1(){
 creatbt();
 // after click on button those have class b1 calling displayinfo function
 $(document).on("click", ".b1", displayInfo);
+
+
+$(document).on("click",".img", function() {
+    // STEP ONE: study the html above.
+    // Look at all the data attributes.
+    // Run the file in the browser. Look at the images.
+    $(".img").on("click", function(){
+      var state = $(this).attr("data-state");
+      var an = $(this).attr("data-animate");
+      var still= $(this).attr("data-still");
+      if(state == "still"){
+            $(this).attr("src",an);
+            $(this).attr("data-state","animte");
+        }
+        else{
+          $(this).attr("src",still);
+          $(this).attr("data-state","still");
+        }
+
+    });
+});
