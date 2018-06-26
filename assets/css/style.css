@@ -1,9 +1,23 @@
 .img{
-    /* width: 20%; */
-    /* height: 20%; */
     float: left;
     padding: 5px;
 }
-.p{
-    float: left;
+
+.b{
+    background:black;
+}
+.btn{
+    background: black;
+    color: white;
+}
+.h11{
+    color: white;
+
+}
+.text1{
+    color: white;
+}
+.h12{
+    color:rgb(174, 174, 224);
+
 }
